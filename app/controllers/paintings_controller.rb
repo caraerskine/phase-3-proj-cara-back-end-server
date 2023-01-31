@@ -15,13 +15,14 @@ post '/paintings' do
   painting.to_json
 end
 
+
   # aka dogs, delete does not return anything method delete
   # delete '/paintings/:id' do 
   #   painting = Painting.find_by(id: params[:id])
   #   painting.destroy
   # end
 
-  #update the painting' info
+  #update the painting' info (could be the Liker button)
 #   patch '/paintings/:id' do
 #     painting = Painting.find_by(id: params[:id])
 #     painting.update(name: params[:name])

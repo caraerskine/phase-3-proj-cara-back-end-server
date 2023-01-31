@@ -11,17 +11,38 @@ class ArtistsController < ApplicationController
 #     "Hello World"
 #   end
 
+#this is to get the individual artists paintings (idea from mauricio)
+get '/artists/:id/paintings' do
+  paintings = Painting.find_by(:artist_id => params[:id])
+  paintings.to_json(include: :artist)
+end
 
-  #aka owners
-  get '/artists' do
-    artists = Artist.all
-    artists.to_json(include: :paintings)
-  end
+#this is to get the individual artists paintings (idea from mauricio)
+get '/artists/:id/paintings' do
+  paintings = Painting.find_by(:artist_id => params[:id])
+  paintings.to_json(include: :artist)
+end
 
-  #artists show route (owners) this is a dynamic route
-  # getting the request, parsing it, in the params hash and key of id and value is 4 or whatever the id is
-  get '/artists/:id' do
-    artist = Artist.find(params[:id])
-    artist.to_json(include: :paintings)
-    end 
-  end
+
+#aka owners
+get '/artists' do
+  artists = Artist.all
+  artists.to_json(include: :paintings)
+end
+
+
+  
+
+end
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+end
