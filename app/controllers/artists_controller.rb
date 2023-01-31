@@ -30,9 +30,6 @@ get '/artists' do
   artists.to_json(include: :paintings)
 end
 
-
-  
-
 end
 
 

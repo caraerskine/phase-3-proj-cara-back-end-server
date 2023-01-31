@@ -15,6 +15,15 @@ post '/paintings' do
   painting.to_json
 end
 
+#other one, but we decided to put it with the artists too
+#could be in either route just need full CRUD on one
+#paintings
+#maybe it should be a find_by and not a where here
+
+# get '/paintings/:id' do
+#   paintings = Painting.where(:artist_id => params[:id])
+#   paintings.to_json(include: :artist)
+# end 
 
   # aka dogs, delete does not return anything method delete
   # delete '/paintings/:id' do 
