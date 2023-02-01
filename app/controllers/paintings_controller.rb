@@ -9,7 +9,7 @@ class PaintingsController < ApplicationController
     paintings.to_json(include: :artist)
   end
 
-#  this is the add from the Painting Form 
+#  this is the add from the Painting Form from the "add a painting" button on the artists card
 post '/paintings' do
   painting = Painting.create(params)
   painting.to_json
@@ -31,7 +31,9 @@ end
   #   painting.destroy
   # end
 
-  #update the painting' info (could be the Liker button)
+# WHICH CONTROLLER SHOULD BE FULL CRUD
+
+ #update the painting' info (could be the Liker button)
 #   patch '/paintings/:id' do
 #     painting = Painting.find_by(id: params[:id])
 #     painting.update(name: params[:name])
