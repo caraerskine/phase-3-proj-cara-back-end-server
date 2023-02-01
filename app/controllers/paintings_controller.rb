@@ -10,10 +10,10 @@ class PaintingsController < ApplicationController
   end
 
 #  this is the add from the Painting Form from the "add a painting" button on the artists card
-post '/paintings' do
-  painting = Painting.create(params)
-  painting.to_json
-end
+  post '/paintings' do
+    painting = Painting.create(params)
+    painting.to_json
+  end
 
 #other one, but we decided to put it with the artists too
 #could be in either route just need full CRUD on one
@@ -25,15 +25,16 @@ end
 #   paintings.to_json(include: :artist)
 # end 
 
+#This is the REMOVE trash can icon on painting card
   # aka dogs, delete does not return anything method delete
-  # delete '/paintings/:id' do 
-  #   painting = Painting.find_by(id: params[:id])
-  #   painting.destroy
-  # end
+  delete '/paintings/:id' do 
+    painting = Painting.find_by(id: params[:id])
+    painting.destroy
+  end
 
-# WHICH CONTROLLER SHOULD BE FULL CRUD
+# I THINK PAINTING CONTROLLER SHOULD BE FULL CRUD
 
- #update the painting' info (could be the Liker button)
+ #update the painting with the LIKER button on painting card
 #   patch '/paintings/:id' do
 #     painting = Painting.find_by(id: params[:id])
 #     painting.update(name: params[:name])

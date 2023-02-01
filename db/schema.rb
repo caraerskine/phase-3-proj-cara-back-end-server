@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2023_01_24_170730) do
     t.string "title"
     t.string "medium"
     t.integer "year"
+    t.integer "like"
     t.string "img_link"
     t.integer "artist_id"
     t.boolean "famous"

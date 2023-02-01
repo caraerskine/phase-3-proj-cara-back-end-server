@@ -13,17 +13,17 @@ class ArtistsController < ApplicationController
 
 # WHICH CONTROLLER SHOULD BE FULL CRUD
 
-#this is to get the individual artists paintings to show up when user clicks "see all paintings by this artist" (idea from mauricio)
-get '/artists/:id/paintings' do
-  paintings = Artist.find_by(id: params[:id])
-  paintings.to_json(include: :paintings)
-end
+#this is to get the individual artists paintings to show up when user clicks "see all paintings by this artist" 
+  get '/artists/:id/paintings' do
+    paintings = Artist.find_by(id: params[:id])
+    paintings.to_json(include: :paintings)
+  end
 
 #aka owners
-get '/artists' do
-  artists = Artist.all
-  artists.to_json(include: :paintings)
-end
+  get '/artists' do
+    artists = Artist.all
+    artists.to_json(include: :paintings)
+  end
 
 end
 
