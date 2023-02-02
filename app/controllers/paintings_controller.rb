@@ -2,7 +2,7 @@ class PaintingsController < ApplicationController
 
   #Paintings is Dogs  
 
-#aka dogs
+#aka dogs READ
  get '/paintings' do
     # pry
     paintings = Painting.all
@@ -10,7 +10,7 @@ class PaintingsController < ApplicationController
   end
 
 #  this is the add from the Painting Form from the "add a painting" button on the artists card
-  post '/paintings' do
+# CREATE
     painting = Painting.create(params)
     painting.to_json
   end
@@ -25,16 +25,21 @@ class PaintingsController < ApplicationController
 #   paintings.to_json(include: :artist)
 # end 
 
+
+
 #This is the REMOVE trash can icon on painting card
   # aka dogs, delete does not return anything method delete
-  delete '/paintings/:id' do 
-    painting = Painting.find_by(id: params[:id])
-    painting.destroy
-  end
+  # delete ':id/paintings' do 
+  #   painting = Painting.find_by(id: params[:id])
+  #   painting.destroy
+  # end
+
+
 
 # I THINK PAINTING CONTROLLER SHOULD BE FULL CRUD
 
  #update the painting with the LIKER button on painting card
+ #or should it be 
 #   patch '/paintings/:id' do
 #     painting = Painting.find_by(id: params[:id])
 #     painting.update(name: params[:name])
