@@ -1,6 +1,6 @@
 class PaintingsController < ApplicationController
  
-  # I THINK PAINTING CONTROLLER SHOULD BE FULL CRUD
+  # I THINK PAINTING CONTROLLER SHOULD BE FULL CRUD ???
 
 #READ
  get '/paintings' do
