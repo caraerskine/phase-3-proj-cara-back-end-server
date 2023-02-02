@@ -4,7 +4,7 @@ class CreatePaintings < ActiveRecord::Migration[6.1]
         t.string :title
         t.string :medium
         t.integer :year
-        t.integer :like #for the liker button
+        t.integer :like #for the liker button?
         t.string  :img_link
         t.integer :artist_id #foreign key
         t.boolean :famous
