@@ -16,7 +16,7 @@ end
 
 
 
-
+#lines 5 and 6 were 'paintings =' and I've tried it as 'artists' i am not sure
  
 
 
