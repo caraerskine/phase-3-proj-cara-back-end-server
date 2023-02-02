@@ -11,6 +11,7 @@ class PaintingsController < ApplicationController
 
 #  this is the add from the Painting Form from the "add a painting" button on the artists card
 # CREATE
+post '/paintings' do
     painting = Painting.create(params)
     painting.to_json
   end
