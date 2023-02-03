@@ -18,7 +18,7 @@ post '/paintings' do
 
   #DELETE
 #This is the REMOVE trash can icon on painting card so you can delete that specific painting
-  # aka dogs, delete does not return anything method delete
+  # method delete does not return anything 
   delete '/paintings/:id' do 
     painting = Painting.find_by(id: params[:id])
     painting.destroy
