@@ -19,10 +19,10 @@ post '/paintings' do
   #DELETE
 #This is the REMOVE trash can icon on painting card so you can delete that specific painting
   # aka dogs, delete does not return anything method delete
-  # delete ':id/paintings' do 
-  #   painting = Painting.find_by(id: params[:id])
-  #   painting.destroy
-  # end
+  delete '/paintings/:id' do 
+    painting = Painting.find_by(id: params[:id])
+    painting.destroy
+  end
 
   #UPDATE
  #update the painting with the LIKER button on painting card
