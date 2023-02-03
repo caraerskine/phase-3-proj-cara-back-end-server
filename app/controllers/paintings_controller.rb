@@ -37,7 +37,7 @@ end
 
 
 
-
+#idk
 #other one, but we decided to put it with the artists too
 #could be in either route just need full CRUD on one
 #paintings
