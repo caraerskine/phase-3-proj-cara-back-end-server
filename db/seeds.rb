@@ -1,5 +1,8 @@
 puts "🌱 Seeding artists and paintings..."
 
+Painting.destroy_all
+Artist.destroy_all
+
 # Seed your database here
 
 a1 = Artist.create(first_name: "Frida", last_name: "Kahlo", living: false , img_link: "https://media.vogue.fr/photos/5c2f474e14f2f3cf7b8e34f4/master/pass/004_frida_kahlo_brows_vogue_int_getty_images_jpg_7867.jpg" )

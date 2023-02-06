@@ -26,12 +26,11 @@ post '/paintings' do
 
   #UPDATE
  #update the painting with the LIKER button on painting card
- #or should it be 
-#   patch '/paintings/:id' do
-#     painting = Painting.find_by(id: params[:id])
-#     painting.update(name: params[:name])
-#     painting.to_json
-#   end  
+  patch '/paintings/:id' do
+    painting = Painting.find_by(id: params[:id])
+    painting.update(like: params[:like])
+    painting.to_json
+  end  
 
 end
 
