@@ -13,6 +13,9 @@ get '/artists/:id/paintings' do
     artists.to_json(include: :paintings)
   end
 
+  #i think i need a CREATE
+  #could do an artist form?
+
 end
 
 

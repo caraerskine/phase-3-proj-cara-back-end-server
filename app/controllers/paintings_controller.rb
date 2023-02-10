@@ -24,7 +24,6 @@ post '/paintings' do
 
   #UPDATE
  #update the painting with the LIKER button on painting card
- #line 30 is like key
   patch '/paintings/:id' do
     painting = Painting.find_by(id: params[:id])
     painting.update(like: params[:like])
