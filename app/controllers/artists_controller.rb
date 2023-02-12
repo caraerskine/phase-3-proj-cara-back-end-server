@@ -13,8 +13,8 @@ get '/artists/:id/paintings' do
     artists.to_json(include: :paintings)
   end
 
- #i need a CREATE could do an artist form?
-  post '/artists' do
+  #add artist
+  post '/artists/:id/new' do
     artists = Artist.create(params)
     artists.to_json
   end
@@ -22,7 +22,7 @@ get '/artists/:id/paintings' do
 end
 
 
-
+#'/artists/:id/artists/new'   idk
 
 
 
