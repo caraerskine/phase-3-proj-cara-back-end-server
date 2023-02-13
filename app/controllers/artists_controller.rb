@@ -14,14 +14,14 @@ get '/artists/:id/paintings' do
   end
 
   #add artist
-  post '/artists/:id/new' do
+  post '/artists' do
     artists = Artist.create(params)
     artists.to_json
   end
 
 end
 
-
+#should above be
 #'/artists/:id/artists/new'   idk
 
 
