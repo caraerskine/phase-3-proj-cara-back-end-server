@@ -1,12 +1,12 @@
 class PaintingsController < ApplicationController
  
 
- get '/paintings' do
+  get '/paintings' do
     paintings = Painting.all
     paintings.to_json(include: :artist)
   end
 
-post '/paintings' do
+  post '/paintings' do
     painting = Painting.create(params)
     painting.to_json
   end
