@@ -8,21 +8,22 @@ class PaintingsController < ApplicationController
     paintings.to_json(include: :artist)
   end
 
-# add painting
 # CREATE
+# add painting
 post '/paintings' do
+    # binding.pry
     painting = Painting.create(params)
     painting.to_json
   end
 
-  #DELETE
+#DELETE
 #delete specific painting
   delete '/paintings/:id' do 
     painting = Painting.find_by(id: params[:id])
     painting.destroy
   end
 
-  #UPDATE
+#UPDATE
  #update the painting with the LIKER button on painting card
   patch '/paintings/:id' do
     painting = Painting.find_by(id: params[:id])
