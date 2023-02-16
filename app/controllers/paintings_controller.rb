@@ -1,6 +1,5 @@
 class PaintingsController < ApplicationController
  
-
   get '/paintings' do
     paintings = Painting.all
     paintings.to_json(include: :artist)
