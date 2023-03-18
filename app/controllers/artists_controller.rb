@@ -1,6 +1,5 @@
 class ArtistsController < ApplicationController
 
-
   get '/artists/:id/paintings' do
     paintings = Artist.find_by(id: params[:id])
     paintings.to_json(include: :paintings)

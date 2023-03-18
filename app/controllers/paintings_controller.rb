@@ -6,7 +6,8 @@ class PaintingsController < ApplicationController
   end
 
   post '/paintings' do
-    painting = Painting.create(params)
+    artist = Artist.find_by(id: params[:artist_id])
+    painting = artist.paintings.create(params)
     painting.to_json
   end
 
